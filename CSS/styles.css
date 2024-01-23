@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Roboto:wght@300&display=swap');
+ 
+body{
+    padding: 0;
+    margin: 0;
+    /*background-image: linear-gradient(to right, #f2f4f1 75%, #dce1da 25%);*/
+
+}
+#primera-pagina .container-1{
+    width: 100%;
+    height: 400px;
+    background-image: url(../image/corazon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    opacity: 68%;
+}
+
+ 
+#primera-pagina .container-1 .carrusel{
+    display: flex;
+    width: 20%;
+    height: 40%;
+  
+} 
+#primera-pagina .container-1 .posicion{
+    bottom: 90%;
+    left: 10%;
+    width: 50rem;
+    height: 35rem;
+
+}
+#primera-pagina .container-1 .carrusel-texto{
+    margin-top: 254px;
+    margin-left: 101px;
+}
+#primera-pagina .container-1 .texto-primero{
+    width: 554px;
+    height: 115px;
+    color: #ffffff;
+    letter-spacing: 0.67px;
+    font-size: 46px;
+    text-align: left;
+    opacity: 1;
+    font-family:var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-poppins);
+
+}
+#primera-pagina .container-1 .texto-segundo{
+    width: 343px;
+    height: 42px;
+    margin-top: 0px;
+    letter-spacing: 0.22px;
+    text-align: left;
+    color: #000000;
+    font-family: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-21) var(--unnamed-font-family-roboto);
+    font-size: 16px;
+    opacity: 1;
+}
+#primera-pagina .container-1 .boton1,
+#primera-pagina .container-1 .boton2,
+#primera-pagina .container-1 .boton3{
+    width: 144px;
+    height: 48px;
+    margin-top: 50px;
+    border-radius: 25px;
+    background: #E0752F;
+    color: #FFFFFF;
+    border-style: none;
+    margin-right: 1121px;
+    font-family: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-21) var(--unnamed-font-family-roboto);
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.22px;
+    color: #FFFFFF;
+    opacity: 1;
+
+}
+#primera-pagina .container-1 .redondo{
+    border-radius: 50%;
+    align-items: flex-start; 
+}
+#primera-pagina .container-1 .principal {
+    display: flex;
+    width:100%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#primera-pagina .container-1 .principal .logo{
+    width: 129px;
+    height: 30px;
+    margin-left: 100.33px;
+    margin-top: 33px;
+    margin-bottom: 33px;
+    right: 1137px;
+ 
+}
+#primera-pagina .principal
+{
+    margin-top: 0%;
+    background-color: #dce1da;
+    position: fixed;
+    opacity: 50%;
+}
+#primera-pagina .menu{
+    height: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    width: auto;
+    transform: translateX(0%);
+    float:inherit;
+    background: transparent;
+    justify-content: flex-end;
+    align-content: space-around;
+    text-align: center;
+    margin-left: 55%;
+    word-spacing: 45px;
+    
+  }
+  
+  #primera-pagina .menu a {
+    display: inline-block;
+    height: 25px;
+    width: 100px;
+    justify-content: right;
+    text-align: center;
+    text-decoration: none;
+    position: static;
+    color: black;
+    font-family: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    font-size: 25px;
+    letter-spacing: 0px;
+    opacity: 1;
+  }
+ 
