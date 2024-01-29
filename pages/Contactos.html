@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Backerhaus || Contactos</title>
+    <link rel="icon" href="/image/backerhaus imagen.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/Contactos.CSS">
+    <script src="https://kit.fontawesome.com/dc08167a38.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="encabezado">
+        <nav class="conteiner1">
+                <div class="principal">
+                   
+                    <div class="menu">
+                       <nav>
+                          <b>
+                            <a href="/index.html">Inicio</a>
+                            <a href="/pages/Nosotros.html">Nosotros</a>
+                            <a href="/pages/Productos.html" target="_blank">Productos</a>
+                            <a href="/pages/Contactos.html">Contactos</a>
+                          </b>
+                        </nav>
+                    </div>
+                </div>
+        </nav>
+        <img src="../image/frente.jpg" alt="">
+    </header>
+    <section class="contactos">
+        <h1 class="titulo1">
+            Encontranos en nuestras sucursales en Córdoba
+        </h1>
+        <div class="cuerpo1">
+        <h3 class="subtitulo1">
+            General Paz
+        </h3>
+        <p class="gral-paz">Calle Fray Mamerto Esquiu 14 </p>
+        <a href="https://api.whatsapp.com/send?phone=5493513991775" target="_blank"> <i class="fab fa-whatsapp"> 351-3991775</i></a>
+         </div>
+         <div class="cuerpo2">
+            <h3 class="subtitulo2">
+                Alta Córdoba
+            </h3>
+            <p class="alta-cba"> Juan A. Sarachaga 820 </p>
+            <a href="https://api.whatsapp.com/send?phone=5493512066706" target="_blank"><i class="fab fa-whatsapp"> 351-2066706</i></a>
+         </div>
+         <div class="cuerpo3">
+            <h3 class="subtitulo3">
+                Obrador - San Vicente
+            </h3>
+            <p class="obrador"> Entre Rios 2335 </p>
+            <a href="https://api.whatsapp.com/send?phone=5493513923865" target="_blank"><i class="fab fa-whatsapp"> 351-3923865</i></a>
+         </div>
+         <div class="parte2">
+         <h1 class="titulo_2">
+            También en nuestras redes sociales:
+        </h1>
+        <div class="instagram">
+            <h3 class="subtitulo-1">Instagram</h3>
+            <a href="https://www.instagram.com/backerhaus/" target="_blank">@Backerhaus
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="facebook">
+            <h3 class="subtitulo-2">Facebook</h3>
+            <a href="https://www.facebook.com/pancafevermut?mibextid=uzlsIk" target="_blank"> Backerhaus
+                <i class="fab fa-facebook"></i>
+            </a>
+            </a>
+        </div>
+        <div class="mapa">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <div id="map" style="height: 520px; width: 90%;"></div>
+    <script>
+        var markers = [
+          { coords: [-31.4168950867457, -64.16990151355168], title: 'Backer General Paz' },
+          { coords: [-31.390785015760166, -64.18549620292286], title: 'Backer Alta Córdoba' },
+          { coords: [-31.423858763695726, -64.15402967593509], title: 'Obrador Backerhaus' }
+        ];
+        var myMap = L.map('map').setView(markers[0].coords, 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(myMap);
+        markers.forEach(function(marker) {
+          L.marker(marker.coords).addTo(myMap).bindPopup(marker.title);
+        });
+      </script>
+        </div>
+    </section>
+    </body>
