@@ -20,7 +20,7 @@
                           <b>
                             <a href="/index.html">Inicio</a>
                             <a href="/pages/Nosotros.html">Nosotros</a>
-                            <a href="/pages/Productos.html">Productos</a>
+                            <a href="/pages/Productos.html" target="_blank">Productos</a>
                             <a href="/pages/Contactos.html">Contactos</a>
                           </b>
                         </nav>
@@ -36,22 +36,38 @@
         <div class="campos-formulario1">
                 <form class="form1">
                 <label for="correo">Correo</label>
-                <input type="email" id="mail" name="correo" required> <br>
+                <input type="email" id="mail" name="correo"> <br>
                 <label for="Nombre y apellido">Nombre y apellido</label> 
-                <input type="text" id="nombre" name="nombre" required> <br>
+                <input type="text" id="nombre" name="nombre"> <br>
                 <label for="Telefono">Telefono</label>
-                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="Ej. 1234567890" required> <br>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,13}" placeholder="Ej. 1234567890"> <br>
                 <label for="Archivo">Subi tu curriculum</label>
-                <input type="file" id="PDF" name="CVPDF" accept=".PDF" required> <br>
+                <input type="file" id="cvPDF" name="CVPDF" accept=".PDF"> <br>
             <button class="boton-enviar" type="submit" onclick="mostrarMensaje()">Enviar</button>
-            <script>
-                function mostrarMensaje()
-                {
-                    alert("¡Formulario enviado exitosamente!")
-                }
-            </script>
             <button class="boton-limpiar" type="reset">Limpiar campos</button>
+            <script>
+                function validarFormulario()
+        {
+            var mail = document.getElementById("mail").value;
+            var nombre = document.getElementById("nombre").value;
+            var telefono = document.getElementById("telefono").value;
+            var cvInput = document.getElementById("cvPDF");
+              if (mail === "" || nombre === "" || telefono === "" ||!cvInput.files.length) {
+                alert("Todos los campos son obligatorios. Por favor, completa el formulario.");
+                return false;
+            }
+            else { return true};
+        }
+</script>
     </form>
+    <script>
+        function mostrarMensaje()
+{ 
+if(validarFormulario())
+{alert("¡Formulario enviado exitosamente!")}
+
+}
+    </script>
     </div>
     </section>
 </body>

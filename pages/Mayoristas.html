@@ -20,7 +20,7 @@
                           <b>
                             <a href="/index.html">Inicio</a>
                             <a href="/pages/Nosotros.html">Nosotros</a>
-                            <a href="/pages/Productos.html">Productos</a>
+                            <a href="/pages/Productos.html" target="_blank">Productos</a>
                             <a href="/pages/Contactos.html">Contactos</a>
                           </b>
                         </nav>
@@ -45,36 +45,52 @@
         <div class="campos-formulario1">
             <form class="form1">
             <label for="correo">Correo</label>
-            <input type="email" id="mail" name="correo" placeholder="ejemplo@ejemplo"> <br>
+            <input type="email" id="mail" name="correo" placeholder="ejemplo@ejemplo" required> <br>
             <label for="Nombre y apellido">Nombre y apellido</label> 
             <input type="text" id="nombre" name="nombre" required> <br>
             <label for="Telefono">Telefono</label>
-            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="Ej. 1234567890" required> <br>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,13}" placeholder="Ej. 3511234567" required> <br>
             <label for="ubicacion">Dirección:</label>
             <input type="text" id="ubicacion" placeholder="Ingresa tu dirección" required> <br>
             <label for="ciudad">Ciudad</label>
-            <input type="text" name="ciudad" id="ciudad" placeholder="Ej. Córdoba"> <br>
+            <input type="text" name="ciudad" id="ciudad" placeholder="Ej. Córdoba" required> <br>
             <label for="Mensjae">¿Qué productos estás buscando?</label> <br>
             <div class="productos">
                 <nav>
                     <p class="parrafo-productos">
-                        Si todavía no conoces nuestro catálogo de propuestas, podes verlo haciendo click <a href="../pages/Productos.html">acá</a>
+                        Si todavía no conoces nuestro catálogo de propuestas, podes verlo haciendo click <a href="../pages/Productos.html"  target="_blank">acá</a>
                     </p>
                 </nav>
             </div>
+            <div class="rbt">
             <label for="bolleria-dulce">Bollería dulce</label>
-            <input type="checkbox" id="bolleria-dulce"> <br>
+            <input type="radio" id="opcion1"> <br>
             <label for="bolleria-salada">Bollería salada</label>
-            <input type="checkbox" id="bolleria-salada"> <br>
-            <label for="panes">Pan de masa madre</label>
-            <input type="checkbox" id="panes"> <br>
-            <label for="tortas">Tortas</label>
-            <input type="checkbox" id="tortas"> <br>
+            <input type="radio" id="opcion2"> <br>
+            <label for="masamadre">Masa madre</label>
+            <input type="radio" id="opcion3"> <br>
+            <label for="Panaderíatradiciona1">Panadería tradicional</label>
+            <input type="radio" id="opcion4"><br>
+            <label for="reposteria">Reposteria</label>
+            <input type="radio" id="opcion5"> <br>
+            <label for="fyv">Facturas y viennoiserie</label>
+            <input type="radio" id="opcion6"> <br>
             <label for="otros">Otros</label>
-            <input type="checkbox" id="otros" onchange="mostrarCajaDeTexto()"> <br>
-            <div id="cajaDeTexto">
-                <label for="otros">Por favor, mencione cuales productos prefiere</label>
-                <input type="text" id="otros-productos" name="otros-productos">
+               <div class="rbt-otro">
+                <input type="radio" id="opcion7" onchange="mostrarCajaDeTexto()"> <br>
+                 <div class="cajaDeTexto">
+                    <label for="otros">Por favor, mencione cuales productos prefiere</label>
+                    <textarea id="cajadetext" oninput="autoResize()"></textarea>
+                    <script>
+                        function autoResize()
+                        {
+                            const cajadetext = document.getElementById("cajadetext");
+                            cajadetext.style.height = "auto";
+                            cajadetext.style.height = cajadetext.scrollHeight + "px"
+                        }
+                    </script>
+                 </div>
+            </div>
             </div>
             <script>
                 function mostrarCajaDeTexto()
@@ -97,14 +113,68 @@
 
 
         <button class="boton-enviar" type="submit" onclick="mostrarMensaje()">Enviar</button>
+        <button class="boton-limpiar" type="reset">Limpiar campos</button>
         <script>
-            function mostrarMensaje()
+            function validarFormulario()
             {
-                alert("¡Formulario enviado exitosamente!")
+                var mail = document.getElementById("mail").value;
+                var nombre = document.getElementById("nombre").value;
+                var telefono = document.getElementById("telefono").value;
+                var ubicacion = document.getElementById("ubicacion").value;
+                var ciudad = document.getElementById("ciudad").value;
+                  if (mail === "" || nombre === "" || telefono === "" || ubicacion === "" || ciudad === "") {
+                    alert("Todos los campos son obligatorios. Por favor, completa el formulario.");
+                    return false;
+                }
+                var op1 = document.getElementById("opcion1");
+                var op2 = document.getElementById("opcion2");
+                var op3 = document.getElementById("opcion3");
+                var op4 = document.getElementById("opcion4");
+                var op5 = document.getElementById("opcion5");
+                var op6 = document.getElementById("opcion6");
+                var op7 = document.getElementById("opcion7");
+                var op8 = document.getElementById("cajadetext").value;
+                if (!op1.checked && !op2.checked && !op3.checked && !op4.checked && !op5.checked && !op6.checked && !op7.checked && op8 ==="") 
+                {
+                   alert("Debe seleccionar al menos una opción.")
+                   return false;
+
+                }
+                if(op7.checked && op8=== "")
+                {
+                    alert("Por favor describa qué producto necesita")
+                    return false;
+                }
+
+                else return true;
             }
         </script>
-        <button class="boton-limpiar" type="reset">Limpiar campos</button>
 </form>
+<script>
+
+    function limpiarCampos()
+    {
+        document.getElementById("mail").value = "";
+        document.getElementById("nombre").value = "";
+        document.getElementById("telefono").value = "";
+        document.getElementById("ubicacion").value = "";
+        document.getElementById("ciudad").value = "";
+        document.getElementById("opcion1").checked = false;
+        document.getElementById("opcion2").checked = false;
+        document.getElementById("opcion3").checked = false;
+        document.getElementById("opcion4").checked = false;
+        document.getElementById("opcion5").checked = false;
+        document.getElementById("opcion6").checked = false;
+        document.getElementById("opcion7").checked = false;
+        document.getElementById("cajadetext").value = "";
+    }
+    function mostrarMensaje()
+    {
+        if(validarFormulario())
+        {alert("¡Formulario enviado exitosamente!")}
+        limpiarCampos();
+    }
+</script>
 </div>
     </section>
     </body>
