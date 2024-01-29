@@ -1,0 +1,1 @@
+Pagina de backerhaus creada para diplomatura fullstack UNT-BA. La intención es que sea una pagina de experiencia de usuario, tanto de consumidores como de pretensos trabajadores y revendedores de productos.
