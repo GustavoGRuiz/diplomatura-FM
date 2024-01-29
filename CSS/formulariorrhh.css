@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Roboto:wght@300&display=swap');
+ 
+
+body
+{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size:120%;
+}
+
+.encabezado img
+{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    opacity: 45%;
+    object-fit: cover;
+    z-index: -1;
+    margin-top: -10%;
+}
+
+.encabezado .principal
+{
+    background-color: #dce1da;
+    width: 100%;
+    opacity: 50%;
+    height: 50px;
+    margin-top: -10%;
+    position: fixed;
+}
+.encabezado .principal .menu
+{
+    height: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    width: auto;
+    transform: translateX(0%);
+    float:inherit;
+    background: transparent;
+    justify-content: flex-end;
+    align-content: space-around;
+    text-align: center;
+    margin-left: 55%;
+    word-spacing: 45px;
+    margin-top: -30px;
+    
+}
+.encabezado .principal .menu a
+{
+    display: inline-block;
+    height: 25px;
+    width: 100px;
+    justify-content: right;
+    text-align: center;
+    text-decoration: none;
+    position: static;
+    color: black;
+    font-family: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    font-size: 25px;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+.formulario1 .titulo-1
+{
+    position: relative;
+    margin-top: 10%;
+    text-align: center;
+
+}
+.formulario1 .parrafo-1
+{
+    position: relative;
+    margin-top: 0%;
+    text-align: center;
+}
+.formulario1 .campos-formulario1 
+{
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 2%;
+}
+.formulario1 label
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 30%;
+}
+
+.formulario1 input
+{
+    width: 50%; 
+    padding: 5px;
+    margin-left: 30%;
+    box-sizing: border-box; 
+    opacity: 70%;
+}
+
+.formulario1 input:hover
+{
+    opacity: 1;
+}
+
+.formulario1 .boton-enviar,
+.formulario1 .boton-limpiar {
+    width: 150px;
+    height: 48px;
+    margin-top: 15px;
+    border-radius: 25px;
+    background: #E0752F;
+    color: #FFFFFF;
+    border-style: none;
+    font-family: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-21) var(--unnamed-font-family-roboto);
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.22px;
+    opacity: 1;
+    margin-right: 15px; 
+}
+
+.formulario1 .boton-enviar {
+    margin-left: 80px;
+}
+
+.formulario1 .boton-limpiar {
+    margin-left: 5px;
+}

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Roboto:wght@300&display=swap');
+ 
+
+body
+{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size:100%;
+}
+.encabezado img
+{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    opacity: 45%;
+    object-fit: cover;
+    z-index: -1;
+    margin-top: -10%;
+}
+.encabezado .principal
+{
+    background-color: #dce1da;
+    width: 100%;
+    opacity: 50%;
+    height: 50px;
+    margin-top: -10%;
+    position: fixed;
+}
+.encabezado .principal .menu
+{
+    height: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    width: auto;
+    transform: translateX(0%);
+    float:inherit;
+    background: transparent;
+    justify-content: flex-end;
+    align-content: space-around;
+    text-align: center;
+    margin-left: 55%;
+    word-spacing: 45px;
+    margin-top: -30px;
+    
+}
+.encabezado .principal .menu a
+{
+    display: inline-block;
+    height: 25px;
+    width: 100px;
+    justify-content: right;
+    text-align: center;
+    text-decoration: none;
+    position: static;
+    color: black;
+    font-family: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    font-size: 25px;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+.container1 .titulo1
+{
+    position: relative;
+    margin-top: 10%;
+    text-align: center;
+
+}
+.container1 .parrafo1
+{
+    position: relative;
+    margin-top: 0%;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 4%;
+}
+.container1 .parrafo2
+{
+    position: relative;
+    margin-top: -1%;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 4%;
+}
+.container1 .productos .parrafo-productos
+{
+    position: relative;
+    margin-top: -1%;
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 4%;
+}
+
+.container1 .campos-formulario1 
+{
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 2%;
+}
+.form1 label
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20%;
+}
+
+.form1 input
+{
+    width: 78%; 
+    padding: 5px;
+    margin-left: 20%;
+    box-sizing: border-box; 
+    opacity: 70%;
+}
+.form1 input:hover
+{
+    opacity: 1;
+}
+.form1 .boton-enviar,
+.form1 .boton-limpiar {
+    width: 150px;
+    height: 48px;
+    margin-top: 50px;
+    border-radius: 25px;
+    background: #E0752F;
+    color: #FFFFFF;
+    border-style: none;
+    font-family: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-21) var(--unnamed-font-family-roboto);
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.22px;
+    opacity: 1;
+    margin-right: 15px; 
+    margin-left: 13%;
+}
